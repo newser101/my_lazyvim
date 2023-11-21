@@ -24,6 +24,6 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- replace keymaps
 -- formatting
--- keymap({ "n", "v" }, "<leader>lf", function()
---   Util.format({ force = true })
--- end, { desc = "Format" })
+keymap({ "n", "v" }, "<leader>lf", function()
+  Util.format({ force = true })
+end, { remap = true, desc = "Format" })
