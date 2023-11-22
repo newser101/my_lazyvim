@@ -1,3 +1,4 @@
+local Util = require("lazyvim.util")
 return {
   {
     "LazyVim/LazyVim",
@@ -5,6 +6,44 @@ return {
       colorscheme = "catppuccin",
     },
   },
+
+  -- change keymaps for comment
+  -- change lifegrep to <leader>fg
+  {
+    "nvim-telescope/telescope.nvim",
+    keys = {
+      -- change a keymap
+      { "<leader>/", false },
+      --{ "<leader>fg", "<CMD>Telescope live_grep<CR>", desc = "Grep (root dir)" },
+      { "<leader>fg", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+    },
+  },
+  -- add keybinding to mini.comment
+  {
+    "echasnovski/mini.comment",
+    opts = {
+      options = {
+        custom_commentstring = function()
+          return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
+        end,
+      },
+      mappings = {
+        -- Toggle comment (like `gcip` - comment inner paragraph) for both
+        -- Normal and Visual modes
+        comment = "<space>/",
+
+        -- Toggle comment on current line
+        comment_line = "<space>/",
+
+        -- Toggle comment on visual selection
+        comment_visual = "<space>/",
+
+        -- Define 'comment' textobject (like `dgc` - delete whole comment block)
+        textobject = "<space>/",
+      },
+    },
+  },
+  -- change keymaps for comment
 
   -- add Super Tab
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
