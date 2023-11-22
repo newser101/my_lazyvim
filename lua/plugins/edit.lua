@@ -5,6 +5,7 @@ return {
       colorscheme = "catppuccin",
     },
   },
+
   -- add Super Tab
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
