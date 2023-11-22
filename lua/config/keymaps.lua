@@ -27,8 +27,8 @@ keymap("i", "jk", "<ESC>", opts)
 -- replace keymaps
 
 -- save file
--- try to clear global keymaps
+--  delete global keymaps for save file
 keymap({ "i", "x", "n", "s" }, "<C-s>", "<nop>", {}) -- delete orig save keymap
 keymap("n", "<leader>w", "<CMD>w<CR><ESC>", new_opts("new Save file")) -- save file
 -- close buffer
-keymap("n", "<leader>q", "<CMD>q<CR>", new_opts("quit")) -- quit file
+keymap("n", "<leader>q", "<CMD> wq<CR>", new_opts("quit")) -- quit file
