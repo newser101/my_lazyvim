@@ -18,6 +18,7 @@ return {
       { "<leader>fg", Util.telescope("live_grep"), desc = "Grep (root dir)" },
     },
   },
+
   -- add keybinding to mini.comment
   {
     "echasnovski/mini.comment",
