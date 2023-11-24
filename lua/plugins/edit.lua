@@ -98,4 +98,39 @@ return {
     end,
   },
   -- add Super Tab END
+
+  -- add formatter to conform
+  {
+    "stevearc/conform.nvim",
+    opts = function()
+      local opts = {
+        ---@type table<string, conform.FormatterUnit[]>
+        formatters_by_ft = {
+          lua = { "stylua" },
+          -- fish = { "fish_indent" },
+          sh = { "shfmt" },
+          markdown = { "mdformat" },
+        },
+      }
+      return opts
+    end,
+  },
+  -- add formatter to conform END
+
+  -- add Linter
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      events = { "BufWritePost", "BufReadPost", "InsertLeave" },
+      linters_by_ft = {
+        -- fish = { "fish" },
+        markdown = { "markdownlint" },
+        -- Use the "*" filetype to run linters on all filetypes.
+        -- ['*'] = { 'global linter' },
+        -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
+        -- ['_'] = { 'fallback linter' },
+      },
+    },
+  },
+  -- add Linter END
 }
