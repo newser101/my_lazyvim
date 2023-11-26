@@ -146,4 +146,22 @@ return {
     },
   },
   -- Lualine remove clock END
+
+  -- noice add boaeder to HoverDock window
+  {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      opts.presets.lsp_doc_border = true
+    end,
+  },
+  -- noice add boaeder to HoverDock window END
+
+  -- friendly-snippets add custom snippet
+  {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require("luasnip.loaders.from_lua").load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
+    end,
+  },
+  -- friendly-snippets add custom snippet END
 }
