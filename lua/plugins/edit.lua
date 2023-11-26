@@ -99,7 +99,7 @@ return {
   },
   -- add Super Tab END
 
-  -- add formatter to conform
+  -- add formatter to Conform
   {
     "stevearc/conform.nvim",
     opts = function()
@@ -110,12 +110,13 @@ return {
           -- fish = { "fish_indent" },
           sh = { "shfmt" },
           markdown = { "mdformat" },
+          python = { "black" },
         },
       }
       return opts
     end,
   },
-  -- add formatter to conform END
+  -- add formatter to Conform END
 
   -- add Linter
   {
@@ -125,6 +126,7 @@ return {
       linters_by_ft = {
         -- fish = { "fish" },
         markdown = { "markdownlint" },
+        python = { "flake8" },
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
@@ -133,4 +135,15 @@ return {
     },
   },
   -- add Linter END
+
+  -- Lualine remove clock
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_z = {},
+      },
+    },
+  },
+  -- Lualine remove clock END
 }
