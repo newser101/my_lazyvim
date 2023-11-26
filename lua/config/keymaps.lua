@@ -32,3 +32,6 @@ keymap("i", "jk", "<ESC>", opts)
 -- keymap("n", "<leader>w", "<CMD>w<CR><ESC>", new_opts("new Save file")) -- save file
 -- -- close buffer
 -- keymap("n", "<leader>q", "<CMD> wq<CR>", new_opts("quit")) -- quit file
+
+--- disable recording:
+keymap("n", "q", "<Nop>", opts)
