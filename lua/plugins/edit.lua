@@ -161,9 +161,21 @@ return {
     "rafamadriz/friendly-snippets",
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
-      -- require("luasnip.loaders.from_lua").load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
-      require("luasnip.loaders.from_lua").lazy_load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
+      require("luasnip.loaders.from_lua").load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
+      -- require("luasnip.loaders.from_lua").lazy_load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
     end,
   },
   -- friendly-snippets add custom snippet END
+
+  -- bufferline
+  {
+    "akinsho/bufferline.nvim",
+
+    opts = {
+      options = {
+        always_show_bufferline = true,
+      },
+    },
+  },
+  -- bufferline END
 }
