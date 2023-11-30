@@ -28,3 +28,7 @@ which-key delete save and quit for new keymaps
 
 nvim-spectre dissable or let it be
 figure out how flash work - maybe dissable
+
+
+## edit
+### luasnips

@@ -178,4 +178,12 @@ return {
     },
   },
   -- bufferline END
+  {
+    "L3MON4D3/LuaSnip",
+    opts={
+      -- enable_autosnippets=true,
+    }
+  }
+  -- edit luasnips
+  -- edit luasnips END
 }
