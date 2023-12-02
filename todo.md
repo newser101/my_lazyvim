@@ -1,13 +1,41 @@
 # Todo
 
+<!--toc:start-->
+
+- [Todo](#todo)
+  - [keymaps](#keymaps)
+  - [lsp](#lsp)
+  - [dissabel](#dissabel)
+  - [add](#add)
+    - [md preview](#md-preview)
+  - [to change](#to-change)
+  - [try](#try)
+    - [luasnips](#luasnips)
+
+<!--toc:end-->
+
 ## keymaps
 
 close actual buffer leader bp
 dissable recording
-
 maybe dissabel the other neo-tree keymaps fe ge be
+which-key delete save and quit for new keymaps
 
 ## lsp
+
+## dissabel
+
+nvim-notify ?
+nvim-spectre dissable or let it be
+
+## add
+
+### md preview
+
+toggleterm
+
+https://github.com/iamcco/markdown-preview.nvim
+https://github.com/ellisonleao/glow.nvim
 
 ## to change
 
@@ -15,20 +43,11 @@ neo-tree reach upper directories
 dissabel autoformat leader cf????
 gitsigns change signs
 
-- buffer line shows up after openening a second tab
-
-> always_show_bufferline = false,
-
-which-key delete save and quit for new keymaps
-
 ## try
 
 - mini.surround
 - mini.ai
 
-nvim-spectre dissable or let it be
 figure out how flash work - maybe dissable
-
-## edit
 
 ### luasnips
