@@ -35,3 +35,7 @@ keymap("i", "jk", "<ESC>", opts)
 
 --- disable recording:
 keymap("n", "q", "<Nop>", opts)
+
+-- run file
+-- keymap("n", "<leader>p", ":exec 'w | !python3 %'<CR>", opts)
+keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", opts)
