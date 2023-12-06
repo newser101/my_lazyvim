@@ -32,10 +32,10 @@ nvim-spectre dissable or let it be
 
 ### md preview
 
-toggleterm
-
-https://github.com/iamcco/markdown-preview.nvim
 https://github.com/ellisonleao/glow.nvim
+https://github.com/iamcco/markdown-preview.nvim
+
+### toggleterm
 
 ## to change
 
