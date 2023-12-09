@@ -161,6 +161,7 @@ return {
     "rafamadriz/friendly-snippets",
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
+      ---@diagnostic disable-next-line: assign-type-mismatch
       require("luasnip.loaders.from_lua").load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
       -- require("luasnip.loaders.from_lua").lazy_load({ paths = "/home/cawl/.config/nvim/lua/snippets" })
     end,
@@ -178,12 +179,40 @@ return {
     },
   },
   -- bufferline END
-  {
-    "L3MON4D3/LuaSnip",
-    opts={
-      -- enable_autosnippets=true,
-    }
-  }
+
   -- edit luasnips
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   opts = {
+  --     -- enable_autosnippets=true,
+  --   },
+  -- },
   -- edit luasnips END
+
+  -- add lsp to Mason
+  {
+
+    -- "williamboman/mason.nvim",
+    --    opts={
+    -- ensure_installed = {
+    --      "stylua",
+    --      "shfmt",
+    --      -- "flake8",
+    --        -- Installed
+    --    pyright
+    --    ruff
+    --    marksman
+    --    markdownlint
+    --    lua-language-server lua_ls
+    --    black
+    --    flake8
+    --    json-lsp jsonls
+    --    mdformat
+    --    shfmt
+    --    stylua
+    --
+    --    },
+    --    }
+    --  },
+  },
 }
