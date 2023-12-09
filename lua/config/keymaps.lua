@@ -38,7 +38,8 @@ keymap("n", "q", "<Nop>", opts)
 
 -- run file
 -- keymap("n", "<leader>p", ":exec 'w | !python3 %'<CR>", opts)
-keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", opts)
+-- keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", opts)
+keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", { desc = "run Python file" })
 
 -- markdown md_preview
 keymap("n", "md", "<cmd>Glow<CR>", opts)
