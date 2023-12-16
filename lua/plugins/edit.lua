@@ -151,4 +151,30 @@ return {
   --   },
   -- },
   -- edit luasnips END
+
+  -- edit gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      signs = {
+        add = { text = "" },
+        change = { text = "" },
+        delete = { text = "" },
+        topdelete = { text = "" },
+        changedelete = { text = "~" },
+        untracked = { text = "┆" },
+      },
+    },
+  },
+  -- edit gitsigns END
+
+  -- edit illuminate
+  {
+    "RRethy/vim-illuminate",
+    opts = {
+      large_file_overrides = {
+        providers = { "lsp", "treesitter", "regex" },
+      },
+    },
+  },
 }
