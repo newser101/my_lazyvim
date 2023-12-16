@@ -99,43 +99,6 @@ return {
   },
   -- add Super Tab END
 
-  -- add formatter to Conform
-  {
-    "stevearc/conform.nvim",
-    opts = function()
-      local opts = {
-        ---@type table<string, conform.FormatterUnit[]>
-        formatters_by_ft = {
-          lua = { "stylua" },
-          -- fish = { "fish_indent" },
-          sh = { "shfmt" },
-          markdown = { "mdformat" },
-          python = { "black" },
-        },
-      }
-      return opts
-    end,
-  },
-  -- add formatter to Conform END
-
-  -- add Linter
-  {
-    "mfussenegger/nvim-lint",
-    opts = {
-      events = { "BufWritePost", "BufReadPost", "InsertLeave" },
-      linters_by_ft = {
-        -- fish = { "fish" },
-        markdown = { "markdownlint" },
-        python = { "flake8" },
-        -- Use the "*" filetype to run linters on all filetypes.
-        -- ['*'] = { 'global linter' },
-        -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
-        -- ['_'] = { 'fallback linter' },
-      },
-    },
-  },
-  -- add Linter END
-
   -- Lualine remove clock
   {
     "nvim-lualine/lualine.nvim",
@@ -147,7 +110,7 @@ return {
   },
   -- Lualine remove clock END
 
-  -- noice add boaeder to HoverDock window
+  -- noice add border to HoverDock window
   {
     "folke/noice.nvim",
     opts = function(_, opts)
@@ -188,31 +151,4 @@ return {
   --   },
   -- },
   -- edit luasnips END
-
-  -- add lsp to Mason
-  {
-
-    -- "williamboman/mason.nvim",
-    --    opts={
-    -- ensure_installed = {
-    --      "stylua",
-    --      "shfmt",
-    --      -- "flake8",
-    --        -- Installed
-    --    pyright
-    --    ruff
-    --    marksman
-    --    markdownlint
-    --    lua-language-server lua_ls
-    --    black
-    --    flake8
-    --    json-lsp jsonls
-    --    mdformat
-    --    shfmt
-    --    stylua
-    --
-    --    },
-    --    }
-    --  },
-  },
 }
