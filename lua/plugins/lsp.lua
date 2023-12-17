@@ -1,4 +1,17 @@
 return {
+
+  -- add none-ls
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   opts = function(_, opts)
+  --     local nls = require("null-ls")
+  --     opts.sources = opts.sources or {}
+  --     table.insert(opts.sources, nls.builtins..black)
+  --     table.insert(opts.sources, nls.builtins.formatting.prettier)
+  --   end,
+  -- },
+  -- add none-ls END
+
   -- add more treesitter parsers
   -- {
   --   "nvim-treesitter/nvim-treesitter",
@@ -48,14 +61,14 @@ return {
   --   opts = {
   --     events = { "BufWritePost", "BufReadPost", "InsertLeave" },
   --     linters_by_ft = {
-  --       -- fish = { "fish" },
-  --       markdown = { "markdownlint" },
-  --       -- python = { "flake8" },
-  --       python = { "ruff" },
-  --       -- Use the "*" filetype to run linters on all filetypes.
-  --       -- ['*'] = { 'global linter' },
-  --       -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
-  --       -- ['_'] = { 'fallback linter' },
+  --       --       -- fish = { "fish" },
+  --       --       markdown = { "markdownlint" },
+  --       python = { "flake8" },
+  --       --       python = { "ruff" },
+  --       --       -- Use the "*" filetype to run linters on all filetypes.
+  --       --       -- ['*'] = { 'global linter' },
+  --       --       -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
+  --       --       -- ['_'] = { 'fallback linter' },
   --     },
   --   },
   -- },
