@@ -37,22 +37,23 @@ return {
   -- add more treesitter parsers END
 
   -- add formatter to Conform
-  -- {
-  --   "stevearc/conform.nvim",
-  --   opts = function()
-  --     local opts = {
-  --       ---@type table<string, conform.FormatterUnit[]>
-  --       formatters_by_ft = {
-  --         lua = { "stylua" },
-  --         sh = { "shfmt" },
-  --         markdown = { "mdformat" },
-  --         python = { "black" },
-  --         -- fish = { "fish_indent" },
-  --       },
-  --     }
-  --     return opts
-  --   end,
-  -- },
+  {
+    "stevearc/conform.nvim",
+    --   opts = function()
+    --     local opts = {
+    opts = {
+      --       ---@type table<string, conform.FormatterUnit[]>
+      formatters_by_ft = {
+        --         lua = { "stylua" },
+        --         sh = { "shfmt" },
+        markdown = { "mdformat" },
+        --         python = { "black" },
+        --         -- fish = { "fish_indent" },
+      },
+    },
+    --     return opts
+    --   end,
+  },
   -- add formatter to Conform END
 
   -- add Linter
