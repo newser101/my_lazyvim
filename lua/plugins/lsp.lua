@@ -47,10 +47,9 @@ return {
       --       ---@type table<string, conform.FormatterUnit[]>
       formatters_by_ft = {
         --         lua = { "stylua" },
-        --         sh = { "shfmt" },
+        sh = { "shfmt" },
         markdown = { "mdformat" },
-        --         python = { "black" },
-        --         -- fish = { "fish_indent" },
+        fish = { "fish_indent" },
       },
     },
   },
@@ -62,7 +61,7 @@ return {
     optional = true,
     opts = {
       linters_by_ft = {
-        --       -- fish = { "fish" },
+        fish = { "fish" },
         markdown = { "markdownlint" },
         -- python = { "flake8" },
         --       python = { "ruff" },
@@ -75,27 +74,50 @@ return {
   },
   -- add Linter END
 
-  -- add more treesitter parsers
+  -- add  to lspconfig
   {
-    "nvim-treesitter/nvim-treesitter",
+    "neovim/nvim-lspconfig",
     opts = {
-      ensure_installed = {
-        -- "bash",
-        "html",
-        -- "javascript",
-        -- "json",
-        -- "lua",
-        -- "markdown",
-        -- "markdown_inline",
-        -- "python",
-        -- "query",
-        -- "regex",
-        -- "tsx",
-        -- "typescript",
-        -- "vim",
-        -- "yaml",
+      servers = {
+        -- bashls will be automatically installed with mason and loaded with lspconfig
+        bashls = {},
       },
     },
+  },
+  -- add  to lspconfig END
+
+  -- add more treesitter parsers
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = {
+  --     ensure_installed = {
+  --       "bash",
+  --       "html",
+  --       -- "javascript",
+  --       -- "json",
+  --       -- "lua",
+  --       -- "markdown",
+  --       -- "markdown_inline",
+  --       -- "python",
+  --       -- "query",
+  --       -- "regex",
+  --       -- "tsx",
+  --       -- "typescript",
+  --       -- "vim",
+  --       -- "yaml",
+  --     },
+  --   },
+  -- },
+
+  -- extend the default config
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "bash",
+        "html",
+      })
+    end,
   },
   -- add more treesitter parsers END
 }
