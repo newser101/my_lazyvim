@@ -44,12 +44,28 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-      --       ---@type table<string, conform.FormatterUnit[]>
       formatters_by_ft = {
         --         lua = { "stylua" },
         sh = { "shfmt" },
         markdown = { "mdformat" },
         fish = { "fish_indent" },
+        -- optional for format.prettier
+        ["javascript"] = { "prettier" },
+        ["javascriptreact"] = { "prettier" },
+        ["typescript"] = { "prettier" },
+        ["typescriptreact"] = { "prettier" },
+        ["vue"] = { "prettier" },
+        ["css"] = { "prettier" },
+        ["scss"] = { "prettier" },
+        ["less"] = { "prettier" },
+        -- ["html"] = { "prettier" },
+        ["json"] = { "prettier" },
+        ["jsonc"] = { "prettier" },
+        ["yaml"] = { "prettier" },
+        -- ["markdown"] = { "prettier" },
+        ["markdown.mdx"] = { "prettier" },
+        ["graphql"] = { "prettier" },
+        ["handlebars"] = { "prettier" },
       },
     },
   },
@@ -85,29 +101,6 @@ return {
     },
   },
   -- add  to lspconfig END
-
-  -- add more treesitter parsers
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = {
-  --     ensure_installed = {
-  --       "bash",
-  --       "html",
-  --       -- "javascript",
-  --       -- "json",
-  --       -- "lua",
-  --       -- "markdown",
-  --       -- "markdown_inline",
-  --       -- "python",
-  --       -- "query",
-  --       -- "regex",
-  --       -- "tsx",
-  --       -- "typescript",
-  --       -- "vim",
-  --       -- "yaml",
-  --     },
-  --   },
-  -- },
 
   -- extend the default config
   {
