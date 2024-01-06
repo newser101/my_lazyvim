@@ -8,3 +8,5 @@ data
 lazy-lock.json
 lazyvim.json
 test.*
+*utf-8*
+lazy-lock.json
