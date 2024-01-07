@@ -42,5 +42,6 @@ keymap("n", "q", "<Nop>", opts)
 keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", { desc = "run Python file" })
 keymap("n", "<leader>b", "<cmd>TermExec cmd='bash %'<CR>", { desc = "run Shell file" })
 
--- markdown md_preview
-keymap("n", "md", "<cmd>Glow<CR>", opts)
+-- web-tools
+keymap("n", "<leader>ubp", "<cmd>BrowserPreview {-f -p 3000}<CR>", new_opts("Browser Sync Preview"))
+keymap("n", "<leader>ubs", "<cmd>BrowserStop<CR>", new_opts("Browser Sync Stop"))
