@@ -1,25 +1,30 @@
-local ls = require("luasnip")
--- some shorthands...
-local snip = ls.snippet
-local node = ls.snippet_node
-local text = ls.text_node
-local insert = ls.insert_node
-local func = ls.function_node
-local choice = ls.choice_node
-local dynamicn = ls.dynamic_node
+-- local ls = require("luasnip")
+-- local s = ls.snippet
+-- local i = ls.insert_node
+-- local t = ls.text_node
 
-local date = function()
-  return { os.date("%Y-%m-%d") }
-end
+-- ls.add_snippets("lua", {
+return {
+  s("trig", {
+    t("lua snippet loaded"),
+  }),
 
-ls.add_snippets(nil, {
-  all = {
-    snip({
-      trig = "date",
-      namr = "Date",
-      dscr = "Date in the form of YYYY-MM-DD",
-    }, {
-      func(date, {}),
-    }),
-  },
-})
+  s("snippet", {
+    t({ 's("' }),
+    i(1),
+    t({ '",{', "" }),
+    i(0),
+    t({ "", "})," }),
+  }),
+
+  s("trigger", {
+    t({ "After expanding, the cursor is here ->" }),
+    i(1),
+    t({ "", "After jumping forward once, cursor is here ->" }),
+    i(2),
+    t({ "", "After jumping once more, the snippet is exited there ->" }),
+    i(0),
+  }),
+}
+
+-- }

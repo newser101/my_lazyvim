@@ -1,3 +1,3 @@
 return {
-  s("ptrig", t("python loaded!!")),
+  s("trig", t("python snippets loaded!!")),
 }
