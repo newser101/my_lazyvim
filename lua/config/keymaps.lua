@@ -24,7 +24,8 @@ end
 -- Press XX fast to exit insert moder
 keymap("i", "jk", "<ESC>", opts)
 
--- replace keymaps
+-- just for snippet testing
+keymap("n", "ss", "<cmd>source /home/cawl/.config/nvim/lua/plugins/edit.lua<CR>", new_opts("just testing"))
 
 -- save file
 --  delete global keymaps for save file
