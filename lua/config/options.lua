@@ -5,8 +5,8 @@
 local opt = vim.opt
 
 -- show CR symbol at end of the line
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
+opt.list = true
+opt.listchars:append("eol:↴")
 
 -- add german to spellcheck
 opt.spelllang = { "en", "de" }
