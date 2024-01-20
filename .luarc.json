@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "s",
         "t",
-        "i"
+        "i",
+        "f"
     ]
 }
