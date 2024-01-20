@@ -34,8 +34,11 @@ keymap("n", "ss", "<cmd>source /home/cawl/.config/nvim/lua/plugins/edit.lua<CR>"
 -- -- close buffer
 -- keymap("n", "<leader>q", "<CMD> wq<CR>", new_opts("quit")) -- quit file
 
---- disable recording:
+--- disable keymaps:
+--disable recording
 keymap("n", "q", "<Nop>", opts)
+--disable Terminal
+keymap("n", "<C-;>", "<Nop>", opts)
 
 -- run files
 -- keymap("n", "<leader>p", ":exec 'w | !python3 %'<CR>", opts)
