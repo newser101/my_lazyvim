@@ -177,4 +177,20 @@ return {
       },
     },
   },
+  -- edit illuminate END
+
+  -- edit markdown preview keymap
+  {
+    "iamcco/markdown-preview.nvim",
+    keys = function()
+      return {
+        {
+          "<leader>uz",
+          ft = "markdown",
+          "<cmd>MarkdownPreviewToggle<cr>",
+          desc = "Markdown Preview",
+        },
+      }
+    end,
+  },
 }
