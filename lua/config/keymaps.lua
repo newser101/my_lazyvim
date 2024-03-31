@@ -43,8 +43,9 @@ keymap("n", "<C-;>", "<Nop>", opts)
 -- run files
 -- keymap("n", "<leader>p", ":exec 'w | !python3 %'<CR>", opts)
 -- keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", opts)
-keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", { desc = "run Python file" })
-keymap("n", "<leader>b", "<cmd>TermExec cmd='bash %'<CR>", { desc = "run Shell file" })
+keymap("n", "<leader>rp", "<cmd>TermExec cmd='python3 %'<CR>", { desc = "run python file" })
+keymap("n", "<leader>rb", "<cmd>TermExec cmd='bash %'<CR>", { desc = "run shell file" })
+keymap("n", "<leader>rj", "<cmd>TermExec cmd='java %'<CR>", { desc = "run java file" })
 
 -- web-tools
 keymap("n", "<leader>ubp", "<cmd>BrowserPreview {-f -p 3000}<CR>", new_opts("Browser Sync Preview"))
