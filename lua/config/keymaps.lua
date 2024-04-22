@@ -41,11 +41,15 @@ keymap("n", "q", "<Nop>", opts)
 keymap("n", "<C-;>", "<Nop>", opts)
 
 -- run files
--- keymap("n", "<leader>p", ":exec 'w | !python3 %'<CR>", opts)
--- keymap("n", "<leader>p", "<cmd>TermExec cmd='python3 %'<CR>", opts)
 keymap("n", "<leader>rp", "<cmd>TermExec cmd='python3 %'<CR>", { desc = "run python file" })
 keymap("n", "<leader>rb", "<cmd>TermExec cmd='bash %'<CR>", { desc = "run shell file" })
 keymap("n", "<leader>rj", "<cmd>TermExec cmd='java %'<CR>", { desc = "run java file" })
+keymap("n", "<leader>rl", "<cmd>TermExec cmd='lua %'<CR>", { desc = "run lua file" })
+
+-- jump to end of line in insert mode
+keymap("i", "<C-j>", "<End> --> ", { desc = "comment eol in i-mode" })
+keymap("i", "<C-l>", "<C-o><S-a>", { desc = { "jump to eol in i-mode" } })
+-- keymap("i", "<C-l>", "<C-o>$", {desc={"jump to eol in i-mode"}})
 
 -- web-tools
 keymap("n", "<leader>ubp", "<cmd>BrowserPreview {-f -p 3000}<CR>", new_opts("Browser Sync Preview"))
