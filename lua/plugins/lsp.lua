@@ -8,7 +8,12 @@ return {
         "williamboman/mason.nvim",
         opts = function(_, opts)
           opts.ensure_installed = opts.ensure_installed or {}
-          vim.list_extend(opts.ensure_installed, { "java-test", "java-debug-adapter" })
+          vim.list_extend(opts.ensure_installed, {
+            "java-test",
+            "java-debug-adapter",
+            "marksman",
+            "bash-language-server",
+          })
         end,
       },
       {
@@ -47,7 +52,8 @@ return {
       formatters_by_ft = {
         --         lua = { "stylua" },
         sh = { "shfmt" },
-        markdown = { "mdformat" },
+        -- markdown = { "mdformat" },
+        markdown = { "markdownlint" },
         fish = { "fish_indent" },
         -- optional for format.prettier
         ["javascript"] = { "prettier" },
@@ -109,6 +115,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "bash",
         "html",
+        "markdown",
       })
     end,
   },
