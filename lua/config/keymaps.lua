@@ -25,7 +25,7 @@ end
 keymap("i", "jk", "<ESC>", opts)
 
 -- just for snippet testing
-keymap("n", "ss", "<cmd>source /home/cawl/.config/nvim/lua/plugins/edit.lua<CR>", new_opts("just testing"))
+-- keymap("n", "ss", "<cmd>source /home/cawl/.config/nvim/lua/plugins/edit.lua<CR>", new_opts("just testing"))
 
 -- save file
 --  delete global keymaps for save file
